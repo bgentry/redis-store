@@ -38,6 +38,7 @@ class Redis
         options[:db]  = db.to_i if db
         options[:namespace] = namespace if namespace
         options[:password]  = password || uri && uri.password
+        puts "REDIS OPTIONS: #{options.inspect}"
         options
       end
     end
